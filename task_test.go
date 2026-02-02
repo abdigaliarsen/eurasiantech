@@ -90,7 +90,7 @@ func TestGet(t *testing.T) {
 			ttl:       50 * time.Millisecond,
 			wantValue: "",
 			wantErr:   true,
-			wantErrIs: context.Canceled,
+			wantErrIs: context.DeadlineExceeded,
 		},
 		{
 			name: "быстрый адрес побеждает медленный",
